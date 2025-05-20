@@ -1,5 +1,5 @@
 import express from 'express';
-import { PrismaClient } from '@prisma/client';
+import { PrismaClient } from './generated/prisma';
 
 
 
@@ -19,7 +19,7 @@ app.post('/',async (req,res)=>{
 
      await prismaclient.user.create({
         data : {
-            usernamename : Math.random().toString(),
+            username : Math.random().toString(),
             password: Math.random().toString(),
         }
     })
